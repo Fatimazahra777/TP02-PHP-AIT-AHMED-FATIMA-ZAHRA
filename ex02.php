@@ -6,7 +6,6 @@
 </head>
 <body>
 
-<?php
     $nom = "Alami";
     $prenom = "Salma";
     $age = 20;
