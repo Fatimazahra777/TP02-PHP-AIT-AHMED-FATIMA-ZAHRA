@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8">
     <title> EX01.PHP </title>
 </head>
 <body>
@@ -13,7 +13,7 @@
        echo "Nom:AIT AHMED <br>";
 
        echo "Prénom:FATIMA ZAHRA <br>";
-       
+
        echo "Groupe:03 <br><br>";
 
        // commentaire sur une ligne
