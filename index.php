@@ -34,7 +34,6 @@
             color: #2980b9;
         }
     </style>
-</head>
 <body>
 
     <h1>TP02 - Programmation Web en PHP</h1>
