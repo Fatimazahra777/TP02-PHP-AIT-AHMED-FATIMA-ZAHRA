@@ -10,9 +10,9 @@
        echo "Bienvenue dans mon TP PHP <br>"
 
        // Afficher un nom, un prénom et le groupe
-       echo "Nom : AIT AHMED"
-       echo "Prénom : FATIMA ZAHRA"
-       echo "Groupe : 03"
+       echo "Nom:AIT AHMED"
+       echo "Prénom:FATIMA ZAHRA"
+       echo "Groupe:03"
 
        // commentaire sur une ligne
        /* commentaire sur plusieurs lignes */
