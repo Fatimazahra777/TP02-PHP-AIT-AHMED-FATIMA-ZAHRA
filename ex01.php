@@ -18,9 +18,8 @@
 
     // commentaire sur une ligne
     /* commentaire sur plusieurs lignes */
+    echo "La FIN de l'exercice 01";
 ?>
-
-<?= "La FIN de l'exercice 01" ?>
 </body>
 </html>
 
