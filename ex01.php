@@ -21,5 +21,7 @@
 ?>
 
 <?= "La FIN de l'exercice 01" ?>
+</body>
+</html>
 
         
