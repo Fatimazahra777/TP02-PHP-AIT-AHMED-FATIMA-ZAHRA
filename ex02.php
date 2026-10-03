@@ -6,10 +6,10 @@
 </head>
 <body>
 <?php
-    $nom = "Alami";
-    $prenom = "Salma";
+    $nom = "AIT AHMED  <br>";
+    $prenom = "FATIMA ZAHRA";
     $age = 20;
-    $formation = "SMI";
+    $formation = "IAP";
 
     // 2. Construire une phrase de présentation en utilisant la concaténation '.'
     $presentation = "Je m'appelle " . $prenom . " " . $nom . ", j'ai " . $age . " ans et je suis en formation " . $formation . ".";
