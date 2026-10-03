@@ -5,7 +5,7 @@
     <title> EX01.PHP </title>
 </head>
 <body>
-    <?php 
+<?php 
        // Afficher "Bienvenue dans mon TP PHP"
        echo "Bienvenue dans mon TP PHP <br><br>";
 
@@ -18,8 +18,8 @@
 
        // commentaire sur une ligne
        /* commentaire sur plusieurs lignes */
-    ?>
+?>
 
-    <?= "La FIN de l'exercice 01" ?>
+<?= "La FIN de l'exercice 01" ?>
 
         
