@@ -1,4 +1,4 @@
-[22:45, 10/2/2026] 🍀🕊️: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
