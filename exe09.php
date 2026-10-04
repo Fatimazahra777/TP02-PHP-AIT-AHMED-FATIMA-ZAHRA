@@ -2,60 +2,82 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice 8</title>
+    <title>Exercice 9</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 
 <?php
-    // Partie 1: Nombres pairs de 0 a 20 (avec 10 en gras)
-    echo "<h3>Partie 1 : Nombres pairs de 0 à 20</h3>";
-    $i = 0;
-    while ($i <= 20) {
-        if ($i == 10) {
-            echo "<strong>10</strong> ";
+    // Jeu de donnees fictives
+    $notes = [
+        "Amine" => 12,
+        "Sara" => 16,
+        "Youssef" => 8,
+        "Lina" => 14,
+        "Adam" => 10
+    ];
+
+    // Variables d'accumulation
+    $somme = 0;
+    $nbValide = 0;
+    $meilleureNote = -1;
+    $meilleurEtudiant = "";
+
+    // 1 & 2. Affichage du tableau HTML avec foreach
+    echo "<h3>Liste des étudiants et leurs résultats :</h3>";
+    echo "<table>";
+    echo "<tr><th>Étudiant</th><th>Note</th><th>Statut</th></tr>";
+
+    foreach ($notes as $nom => $note) {
+        // Calcul de la somme
+        $somme += $note;
+
+        // Verification du statut (seuil = 10)
+        if ($note >= 10) {
+            $statut = "Validé";
+            $nbValide++;
         } else {
-            echo $i . " ";
-        }
-        $i += 2;
-    }
-    echo "<br><br><hr>";
-
-    // Partie 2: Comparaison entre while et do-while avec compteur = 5
-    echo "<h3>Partie 2 : Comparaison While et Do-While</h3>";
-
-    // Test avec while
-    $compteur1 = 5;
-    $executionsWhile = 0;
-    while ($compteur1 < 5) {
-        $executionsWhile++;
-        $compteur1++;
-    }
-    echo "Executions de la boucle while : " . $executionsWhile . "<br>";
-
-    // Test avec do-while
-    $compteur2 = 5;
-    $executionsDoWhile = 0;
-    do {
-        $executionsDoWhile++;
-        $compteur2++;
-    } while ($compteur2 < 5);
-    echo "Executions de la boucle do-while : " . $executionsDoWhile . "<br><br><hr>";
-
-    // Partie 3: Parcours de 1 a 20 avec continue et break
-    echo "<h3>Partie 3 : Boucle avec continue et break</h3>";
-    for ($i = 1; $i <= 20; $i++) {
-        // Arrêt si compteur atteint 16
-        if ($i == 16) {
-            break;
+            $statut = "Non validé";
         }
 
-        // Ignorer les multiples de 3
-        if ($i % 3 == 0) {
-            continue;
+        // Determination de la meilleure note
+        if ($note > $meilleureNote) {
+            $meilleureNote = $note;
+            $meilleurEtudiant = $nom;
         }
 
-        echo $i . " ";
+        echo "<tr>";
+        echo "<td>" . $nom . "</td>";
+        echo "<td>" . $note . "</td>";
+        echo "<td>" . $statut . "</td>";
+        echo "</tr>";
     }
+
+    echo "</table>";
+
+    // 3. Calcul de la moyenne de la classe
+    $totalEtudiants = count($notes);
+    $moyenne = $somme / $totalEtudiants;
+
+    // Affichage des statistiques
+    echo "<h3>Statistiques de la classe :</h3>";
+    echo "Moyenne de la classe : " . $moyenne . "<br>";
+    echo "Nombre d'étudiants ayant validé : " . $nbValide . "<br>";
+    echo "Meilleure note : " . $meilleurEtudiant . " avec " . $meilleureNote . "/20";
 ?>
 
 </body>
