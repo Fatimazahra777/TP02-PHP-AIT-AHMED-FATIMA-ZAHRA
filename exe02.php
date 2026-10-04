@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-    $nom = "AIT AHMED  <br>";
-    $prenom = "FATIMA ZAHRA";
+    $nom = "AIT AHMED ";
+    $prenom = "FATIMA ZAHRA ";
     $age = 20;
     $formation = "IAP";
 
